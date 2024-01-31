@@ -45,14 +45,14 @@ public class MainActivity extends AppCompatActivity {
     private void ConsumirApi () {
 
         String pro="https://ejemplo2apimovil20240128220859.azurewebsites.net/api/Operaciones?a="+edNum1.getText()+"&b="+edNum2.getText();
-        OkHttpClient cliente=new OkHttpClient();
+        OkHttpClient client=new OkHttpClient();
 
         Request get=new Request.Builder()
                 .url(pro)
                 .build();
 
 
-        cliente.newCall(get).enqueue(new Callback() {
+        client.newCall(get).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 e.printStackTrace();
